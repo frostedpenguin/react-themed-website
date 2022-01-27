@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scripts/functionality.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="links">
+          <a href="./index.html">
+            <picture>
+              <source
+                media="(min-width:600px) and (max-width: 1100px)"
+                srcset="./images/resized/react70X70.png"
+              />
+              <source
+                media=" (max-width: 599px)"
+                srcset="./images/resized/react40X40.png"
+              />
+              <img
+                src="./images/react.png"
+                alt="react-nav-bar"
+                onmouseover="javascript: inflateImage();"
+                id="href_image"
+                onmouseout="javascript: deinflateImage();"
+              />
+            </picture>
+          </a>
+        </li>
+
+        <li class="links">
+          <a href="./articles.html">
+            <h3
+              onmouseover="javascript: inflate(this.id);"
+              id="href"
+              onmouseout="javascript: deinflate(this.id);"
+              id="href"
+            >
+              articles
+            </h3>
+          </a>
+        </li>
+        <li class="links">
+          <a href="./resources.html">
+            <h3
+              onmouseover="javascript: inflate(this.id);"
+              id="href2"
+              onmouseout="javascript: deinflate(this.id);"
+            >
+              resources
+            </h3>
+          </a>
+        </li>
+        <li class="volume_indicator">
+          <h3>V 1.0.0</h3>
+        </li>
+      </ul>
+    </nav>
+    <a href="./article.html">
+      <div class="article_container">
+        <img
+          class="article_container_element"
+          src="./images/react_article_image.jpg"
+          alt="article-image"
+        />
+        <article class="article_container_element">
+          <h2>Τι είναι το React</h2>
+          <p>
+            Το React είναι μία javaScript βιβλιοθήκη οπου αναπτύχθηκε απο το
+            faceboook. Χρησιμοποιείται για την ανάπτυξη διεπαφών χρήστη για
+            ιστοσελίδες.Το κυρίωςπροτέρημα του είναι η δυνατότητα που προσφέρει
+            στους προγραμματιστές να διαιρούν την ιστοσελίδα σε ανεξάρτητα μέρη
+            (components) οπου αλληλεπιδρούν μεταξύ τους και μαζι συνθέτουν το
+            τελικό αποτέλεσμα...
+          </p>
+        </article>
+      </div>
+    </a>
+    <footer>
+      <div class="footer_row">
+        <ul>
+          <li><h4>Navigation</h4></li>
+          <li><a href="./index.html"> home </a></li>
+          <li><a href="./articles.html"> articles </a></li>
+          <li><a href="./resources.html"> resources </a></li>
+        </ul>
+      </div>
+      <div class="footer_row">
+        <ul>
+          <li><h4>React</h4></li>
+          <li><a href="https://reactjs.org/"> home </a></li>
+          <li><a href="https://reactjs.org/docs"> docs </a></li>
+          <li><a href=".https://reactjs.org/blog"> blog </a></li>
+        </ul>
+      </div>
+      <div class="footer_row">
+        <h4>
+          Website made by <br />
+          Panos Katsos &reg;
+        </h4>
+      </div>
+    </footer>
+  </body>
+</html>

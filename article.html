@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="el">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./codeFormat/prism.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scripts/functionality.js"></script>
+  </head>
+  <body>
+    <script src="./codeFormat/prism.js"></script>
+    <nav>
+      <ul>
+        <li class="links">
+          <a href="./index.html">
+            <img
+              src="./images/react.png"
+              alt="react-nav-bar"
+              onmouseover="javascript: inflateImage();"
+              id="href_image"
+              onmouseout="javascript: deinflateImage();"
+            />
+          </a>
+        </li>
+
+        <li class="links">
+          <a href="./articles.html">
+            <h3
+              onmouseover="javascript: inflate(this.id);"
+              id="href"
+              onmouseout="javascript: deinflate(this.id);"
+            >
+              articles
+            </h3>
+          </a>
+        </li>
+        <li class="links">
+          <a href="./resources.html">
+            <h3
+              onmouseover="javascript: inflate(this.id);"
+              id="href2"
+              onmouseout="javascript: deinflate(this.id);"
+            >
+              resources
+            </h3>
+          </a>
+        </li>
+        <li class="volume_indicator">
+          <h3>V 1.0.0</h3>
+        </li>
+      </ul>
+    </nav>
+    <div class="header_wrapper">
+      <h1>Εισαγωγή στο React</h1>
+      <img
+        src="./images/react_article_image.jpg"
+        id="banner-img"
+        alt="article-banner"
+      />
+    </div>
+
+    <section>
+      <h2>Tι είναι το React</h2>
+      <p>
+        Το <a href="https://reactjs.org">React</a> είναι μία βιβλιοθήκη της
+        <a href="https://www.javascript.com/">javaScript</a> οπου αναπτύχθηκε
+        απο το <a href="https://www.facebook.com">faceboook</a>.Χρησιμοποιείται
+        για την ανάπτυξη διεπαφών χρήστη για ιστοσελίδες.Το κυρίως προτέρημα του
+        είναι η δυνατότητα που προσφέρει στους προγραμματιστές να διαιρούν την
+        ιστοσελίδα σε ανεξάρτητα μέρη
+        <a href="https://reactjs.org/docs/components-and-props.html"
+          >(components)</a
+        >
+        οπου αλληλεπιδρούν μεταξύ τους και μαζι συνθέτουν το τελικό αποτέλεσμα
+      </p>
+      <p>
+        Το React εχει αλλάξει τον τροπο με τον οποίο σκεφτόμαστε τις εφαρμογές
+        ιστου και μας έχει δώσει την δυνατότητα να αναπτύσσουμε και να
+        συντηρούμε ιστοσελίδες μεγάλης κλίμακας.
+      </p>
+    </section>
+    <section>
+      <h2>Πως δουλεύει;</h2>
+      <p>
+        Ενα αναπόσπαστο κομμάτι της λειτουργικότητάς του react ειναι οτι δεν
+        διαχειρίζεται το DOM του φυλλομετρητή αλλα δημιουργεί ενα εικονικό DOM
+        <a
+          href=" https://reactjs.org/docs/faq-internals.html#:~:text=The%20virtual%20DOM%20(VDOM)%20is,This%20process%20is%20called%20reconciliation."
+          >(virtual DOM)</a
+        >
+        στην μνημη. Όποιες αλλαγές γίνουν στο εικονικό DOM εφαρμόζονται στο DOM
+        του φυλλομετρητή του browser υστερά.
+      </p>
+    </section>
+
+    <section>
+      <h2>Components</h2>
+      <p>
+        Τα
+        <a href="https://reactjs.org/docs/components-and-props.html"
+          >components</a
+        >
+        είναι τα βασικα στοιχεία μιας εφαρμογής React. Ειναι τα ανεξάρτητα μέρη
+        οπου αναφέρθηκα παραπάνω. Ενα παράδειγμα αποτελεί η παρακάτω
+        φωτογραφία.<br />
+        <img src="./images/article_images/components.png" alt="components" />
+        Κάθε ενα πλαίσιο αντιπροσωπεύει ενα component. Το καθένα απο αυτα είναι
+        υπεύθυνο για την εμφανισή του και τις αλληλεπιδράσεις του.
+        Προγραμματιστικά ενα component συνθέτεται απο στοιχεία html και το
+        styling τους ,καθώς και την λογικη javaScript
+      </p>
+    </section>
+    <section>
+      <h2>JSX</h2>
+      <p>
+        Το React ομως οπως αναφερθήκαμε είναι μια βιβλιοθήκη javaScript οπου απο
+        μόνη της σαν γλώσσα δεν χρησιμοποιείται για την δημιουργία στοιχείων.
+        Για αυτο το React δημιούργησε την
+        <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a>. Το
+        κοινό hello world εκφράζεται με τον εξής τρόπο:
+      </p>
+      <pre>
+          <code class = 'lang-jsx'> const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;</code>
+        </pre>
+
+      <p>
+        Όπως μπορείτε να καταλάβετε είναι σαν ένα υβρίδιο html με javaScript.
+        Στην ουσία είναι ένα extension της γλώσσας όπου μας επιτρέπει να
+        αναθέτουμε τιμές html σε μεταβλητές
+      </p>
+    </section>
+    <section>
+      <h2>Δομή Component</h2>
+      <p>Ενα παράδειγμα δομής ενος component είναι το εξής :</p>
+
+      <pre>
+      <code class = 'lang-jsx'> class Welcome extends React.Component {
+        render() {
+          return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;;
+        }
+      }</code>
+    </pre>
+      <p>
+        Καθε component ειναι στην ουσία μια κλαση
+        <a href="https://en.wikipedia.org/wiki/ECMAScript">ES6</a> οπού μας
+        επιστρέφει ενα στοιχείο JSX. Η συνάρτηση
+        <a href="https://reactjs.org/docs/rendering-elements.html">render</a>
+        καλείτε αρχικά στην αρχικοποίηση του component και ετσι "συλλέγεται" απο
+        το virtual dom και εμφανίζεται στην ιστοσελίδα. Η λέξη
+        <a
+          href="https://reactjs.org/docs/components-and-props.html#gatsby-focus-wrapper"
+          >props</a
+        >
+        είναι δεσμευμένη, ειναι ένα αντικείμενο που χρησιμοποιείται για να
+        περάσει δεδομένα μεσα στο component .Βρίσκεται μεσα σε αγκύλες γιατί
+        ειναι δυναμικά αρχικοποιημένο κάθε αν αλλάξουν τα δεδομένα εισόδου
+        αλλάζει και το στοιχείο. Αλλα επειδή η συνάρτηση render δεν ξανακαλείτε
+        η αλλαγή γίνεται μόνο σε τοπικό επίπεδο και δεν αλλάζει κατι στην
+        ιστοσελίδα.
+      </p>
+    </section>
+    <section>
+      <h2>State</h2>
+      <p>
+        Αμα θέλαμε για παράδειγμα να αλλάζαμε δυναμικά το όνομα στο παραπάνω
+        παράδειγμα, έπρεπε να ταν μέρος του
+        <a href="https://reactjs.org/docs/state-and-lifecycle.html">state</a>
+        του component. Το state ειναι μια συλλογή μεταβλητών της κλάσης που
+        αρχικοποιείται στον constructor και εκφράζει ακριβώς την κατάσταση του
+        όλου στοιχείου. κάθε φορα που αλλάζει η κατάσταση η συνάρτηση render
+        καλείται και η αλλαγή αποτυπώνεται στο DOM. Ενα παράδειγμα εφαρμογής του
+        state είναι το εξής:
+      </p>
+      <pre>
+      <code class="lang-jsx">
+        class Clock extends React.Component { constructor(props) { super(props);
+        this.state = {date: new Date()}; } render() { return (
+        &lt;div&gt;
+          &lt;h1&gt;Hello, world!&lt;/h1&gt;
+          &lt;h2&gt;It is {this.state.date.toLocaleTimeString()}.&lt;/h2&gt;
+        &lt;/div&gt;
+        ); } }</code
+      >
+    </pre>
+      <p>
+        Το component αυτο εκφράζει ενα ρολόι αρχικοποιεί το state με την τωρινη
+        ώρα και την εμφανίζει απο κάτω. Προσοχή ομως καποιος μπορεί να πιστεύει
+        οτι το ρολοί αυτο αλλαζει την ωρα σε πραγματικό χρόνο αλλα εμεις απλα δε
+        του αλλάζουμε την αξία καθε δευτερόλεπτο οποτε απλά μας δείχνει την ώρα
+        αρχικοποίησης. Αμα θελεται να δείτε πως θα πετύχουμε αυτο το αποτέλεσμα
+        πατήστε
+        <a
+          href="https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class"
+          >εδώ</a
+        >.
+      </p>
+    </section>
+    <footer>
+      <div class="footer_row">
+        <ul>
+          <li><h4>Navigation</h4></li>
+          <li><a href="./index.html"> home </a></li>
+          <li><a href="./articles.html"> articles </a></li>
+          <li><a href="./resources.html"> resources </a></li>
+        </ul>
+      </div>
+      <div class="footer_row" id="vicinity">
+        <ul>
+          <li><h4>React</h4></li>
+          <li><a href="https://reactjs.org/"> home </a></li>
+          <li><a href="https://reactjs.org/docs"> docs </a></li>
+          <li><a href=".https://reactjs.org/blog"> blog </a></li>
+        </ul>
+      </div>
+      <div class="footer_row" id="vicinity2">
+        <h4>Website made by Panos Katsos &reg;</h4>
+      </div>
+    </footer>
+  </body>
+</html>

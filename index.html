@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scripts/functionality.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="links">
+          <a href="./index.html">
+            <img
+              src="./images/react.png"
+              alt="react-nav-bar"
+              onmouseover="javascript: inflateImage();"
+              id="href_image"
+              onmouseout="javascript: deinflateImage();"
+            />
+          </a>
+        </li>
+
+        <li class="links">
+          <a href="./articles.html">
+            <h3
+              onmouseover="javascript: inflate(this.id);"
+              id="href"
+              onmouseout="javascript: deinflate(this.id);"
+            >
+              articles
+            </h3>
+          </a>
+        </li>
+        <li class="links">
+          <a href="./resources.html">
+            <h3
+              onmouseover="javascript: inflate(this.id);"
+              id="href2"
+              onmouseout="javascript: deinflate(this.id);"
+            >
+              resources
+            </h3>
+          </a>
+        </li>
+        <li class="volume_indicator">
+          <h3>V 1.0.0</h3>
+        </li>
+      </ul>
+    </nav>
+    <div class="header_wrapper">
+      <h1>Καλωσήρθατε στην Ιστοσελίδα</h1>
+    </div>
+    <br />
+    <div class="grid_container">
+      <picture>
+        <source
+          media="(min-width:600px) and (max-width: 1100px)"
+          srcset="./images/react-banner.png"
+        />
+        <img
+          src="
+            ./images/react-banner-cropped.png  
+          "
+          alt="react-banner"
+          id="banner-img"
+        />
+      </picture>
+
+      <p>
+        Εδω μιλάμε για τα πάντα όσα αφορόυν το react και γενικα το front end
+        development. Αμα και εσείς εχετε παθος και ενδιαφέρων για την αναπτυξη
+        καλαισθητών διεπαφών τοτε είστε στο σωστό μέρος! Αφήστε τον εαυτό σας να
+        εξερευνήσει, να εμπνευστει και να μάθει καινούρια πράγματα. Για να δείτε
+        τα τελευταία μας αρθα παρακαλω πατήστε <a href="./article.html">εδώ</a>.
+      </p>
+      <div class="header_wrapper" id="website">
+        <h1>Ιστοσελίδες οπου χρησιμοποιουν react</h1>
+
+        <div class="partners_container">
+          <a href="https://www.airbnb.com/">
+            <picture>
+              <source
+                media=" (max-width: 600px)"
+                srcset="./images/resized/airbnb-resized.png" />
+              <img
+                src="./images/airbnb.png"
+                alt="airbnb"
+                class="reg_image" /></picture
+          ></a>
+
+          <a href="https://www.dropbox.com/">
+            <picture>
+              <source
+                media=" (max-width: 600px)"
+                srcset="./images/resized/dropbox-resized.png" />
+              <img
+                src="./images/dropbox.png"
+                alt="dropbox"
+                class="reg_image" /></picture
+          ></a>
+
+          <a href="https://www.bbc.com/">
+            <picture>
+              <source
+                media=" (max-width: 600px)"
+                srcset="./images/resized/bbc-resized.png" />
+              <img
+                src="./images/bbc.png"
+                alt="bbc"
+                class="reg_image" /></picture
+          ></a>
+          <a href="https://www.facebook.com/">
+            <picture>
+              <source
+                media=" (max-width: 600px)"
+                srcset="./images/resized/facebook-resized.png" />
+              <img
+                src="./images/facebook.png"
+                alt="facebook"
+                class="reg_image" /></picture
+          ></a>
+        </div>
+      </div>
+      <button
+        onclick="location.href='https://anyforsoft.com/blog/10-famous-websites-built-react-js/'"
+        type="button"
+      >
+        PRESS HERE FOR MORE
+      </button>
+    </div>
+    <div class="header_wrapper">
+      <h1>Η γατούλα της ημέρας !</h1>
+      <img
+        src="https://placekitten.com/200/300"
+        id="kitty-img"
+        onclick="javascript: randomize();"
+        alt="kitty-image"
+      />
+      <h1>Πατήστε στην εικόνα για να την αλλάξεται</h1>
+    </div>
+    <footer>
+      <div class="footer_row">
+        <ul>
+          <li><h4>Navigation</h4></li>
+          <li><a href="./index.html"> home </a></li>
+          <li><a href="./articles.html"> articles </a></li>
+          <li><a href="./resources.html"> resources </a></li>
+        </ul>
+      </div>
+      <div class="footer_row">
+        <ul>
+          <li><h4>React</h4></li>
+          <li><a href="https://reactjs.org/"> home </a></li>
+          <li><a href="https://reactjs.org/docs"> docs </a></li>
+          <li><a href=".https://reactjs.org/blog"> blog </a></li>
+        </ul>
+      </div>
+      <div class="footer_row">
+        <h4>
+          Website made by <br />
+          Panos Katsos &reg;
+        </h4>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scripts/functionality.js"></script>
+    <script src="./scripts/constraint_validation.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="links">
+          <a href="./index.html">
+            <img
+              src="./images/react.png"
+              alt="react-nav-bar"
+              onmouseover="javascript: inflateImage();"
+              id="href_image"
+              onmouseout="javascript: deinflateImage();"
+            />
+          </a>
+        </li>
+
+        <li class="links">
+          <a href="./articles.html">
+            <h3
+              onmouseover="javascript: inflate(this.id);"
+              id="href"
+              onmouseout="javascript: deinflate(this.id);"
+            >
+              articles
+            </h3>
+          </a>
+        </li>
+        <li class="links">
+          <a href="./resources.html">
+            <h3
+              onmouseover="javascript: inflate(this.id);"
+              id="href2"
+              onmouseout="javascript: deinflate(this.id);"
+            >
+              resources
+            </h3>
+          </a>
+        </li>
+        <li class="volume_indicator">
+          <h3>V 1.0.0</h3>
+        </li>
+      </ul>
+    </nav>
+    <div class="header_wrapper">
+      <h1>Εγγραφείτε στην ιστοσελίδα μας!</h1>
+    </div>
+    <form autocomplete="on">
+      <h4>* required fields</h4>
+      <fieldset>
+        <legend>Πρωσοπικά στοιχεία:</legend>
+        <label for="fname">Όνομα: *</label><br />
+        <input
+          required
+          minlength="3"
+          maxlength="20"
+          pattern="[A-Za-zα-ωΑ-Ωά-ώ]+"
+          type="text"
+          id="fname"
+          name="fname"
+        /><br /><br />
+        <label for="lname">Επίθετο: *</label><br />
+        <input
+          required
+          minlength="3"
+          maxlength="20"
+          pattern="[A-Za-zα-ωΑ-Ωά-ώ]+"
+          type="text"
+          id="lname"
+          name="lname"
+        /><br /><br />
+        <label for="age">Ηλικία: *</label><br />
+        <input
+          required
+          min="3"
+          max="100"
+          type="number"
+          id="age"
+          name="age"
+        /><br /><br />
+        <label>Χώρα: *</label><br />
+        <input
+          required
+          minlength="3"
+          maxlength="20"
+          pattern="[A-Za-zα-ωΑ-Ωά-ώ]+"
+          list="country"
+          name="country"
+        />
+        <datalist id="country">
+          <option value="Ελλαδα"></option>
+          <option value="ΗΠΑ"></option>
+          <option value="Γερμανια"></option>
+          <option value="Ιταλια"></option>
+          <option value="Γαλλια"></option>
+          <option value="Ισπανια"></option>
+          <option value="Ρουμανια"></option>
+        </datalist>
+      </fieldset>
+      <fieldset>
+        <legend>Πληροφορίες εγγραφής</legend>
+        <label for="user_name"> Όνομα χρήστη: *</label><br />
+        <input
+          required
+          minlength="5"
+          maxlength="25"
+          type="text"
+          pattern="[A-Za-zα-ωΑ-Ωά-ώ]+"
+          id="user_name"
+          name="user_name"
+        /><br /><br />
+        <label for="password">κωδικός: *</label><br />
+        <input
+          required
+          minlength="8"
+          maxlength="25"
+          type="text"
+          pattern="(?=.*\d)(?=.*[a-zα-ωά-ώ])(?=.*[A-ZΑ-Ω]).{8,}"
+          id="password"
+          name="password"
+          title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+        /><br /><br />
+        <label for="password_repeat"> επανάληψη κωδικού: * </label><br />
+        <input
+          required
+          minlength="8"
+          maxlength="25"
+          type="text"
+          pattern="(?=.*\d)(?=.*[a-zα-ωά-ώ])(?=.*[A-ZΑ-Ω]).{8,}"
+          id="password_repeat"
+          name="password_repeat"
+        /><br /><br />
+      </fieldset>
+      <fieldset>
+        <legend>Σύντομο ερωτηματολόγιο</legend>
+        <label for="education">Επίπεδο εκπέδευσης: * </label> <br /><br />
+        <select required id="education" name="education" size="4">
+          <option value="middle_school">Γυμνάσιο</option>
+          <option value="middle_school">Λύκειο</option>
+          <option value="bachelor">Πανεπηστήμιο</option>
+          <option value="masters_phd">Μεταπτυχιακό/ διδακτορικό</option></select
+        ><br /><br />
+        <label for="work">Εργάζεσται; *</label> <br /><br />
+        <select id="work" name="work" size="2">
+          <option value="yes">Ναί</option>
+          <option value="No">Όχι</option></select
+        ><br /><br />
+        <label>Αν ναί σημπληρώσται τον τομέα σας</label>
+        <br /><br />
+        <input
+          required
+          minlength="3"
+          maxlength="20"
+          pattern="[A-Za-zα-ωΑ-Ωά-ώ]+"
+          list="sector"
+          name="sector"
+        />
+        <datalist id="sector">
+          <option value="Πληροφορική"></option>
+          <option value="Οικονομικά"></option>
+          <option value="Marketing"></option>
+          <option value="HR"></option>
+          <option value="Λογιστική"></option>
+          <option value="Διοικησή"></option></datalist
+        ><br /><br />
+        <label for="web_dev"
+          >Ποιός ρόλος του web development σας αντιπροσωπεύει περισσότερο;
+          *</label
+        >
+        <br /><br />
+        <select required id="web_dev" name="web_dev" size="4">
+          <option value="ux">UI/UX</option>
+          <option value="front_end">Front End</option>
+          <option value="back_end">Back End</option>
+          <option value="full_stack">Full stack</option></select
+        ><br /><br />
+      </fieldset>
+      <fieldset>
+        <legend>επιστολή κινητρού</legend>
+        <label for="letter_of_motivation"
+          >Γιατί θέλεται να εγγραφείτε στον ιστότοπο; *</label
+        >
+        <br />
+        <details>
+          <summary>Συμπληρώστε</summary>
+          <textarea
+            required
+            name="letter_of_motivation"
+            id="letter_of_motivation"
+            rows="20"
+            cols="60"
+          >
+          </textarea>
+        </details>
+      </fieldset>
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+    <footer>
+      <div class="footer_row">
+        <ul>
+          <li><h4>Navigation</h4></li>
+          <li><a href="./index.html"> home </a></li>
+          <li><a href="./articles.html"> articles </a></li>
+          <li><a href="./resources.html"> resources </a></li>
+        </ul>
+      </div>
+      <div class="footer_row">
+        <ul>
+          <li><h4>React</h4></li>
+          <li><a href="https://reactjs.org/"> home </a></li>
+          <li><a href="https://reactjs.org/docs"> docs </a></li>
+          <li><a href=".https://reactjs.org/blog"> blog </a></li>
+        </ul>
+      </div>
+      <div class="footer_row">
+        <h4>
+          Website made by <br />
+          Panos Katsos &reg;
+        </h4>
+      </div>
+    </footer>
+  </body>
+</html>
